@@ -2,5 +2,6 @@
   "buildCommand": "echo 'Static site - no build required'",
   "outputDirectory": ".",
   "framework": "static",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "comment": "Redeployed on 2026-02-02T10:24:11.610Z"
 }
