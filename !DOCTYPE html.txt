@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon by Nelie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="overlay">
+            <h1 class="logo-main">Beauty Salon</h1>
+            <h2 class="logo-sub">by Nelie</h2>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section class="services">
+        <div class="services-container">
+            <div class="services-image">
+                <img src="https://via.placeholder.com/200" alt="Lashes crop" class="circle-img">
+            </div>
+            <div class="services-list">
+                <h3>OUR SERVICES:</h3>
+                <ul>
+                    <li>NAILS</li>
+                    <li>LASHES</li>
+                    <li>EYEBROW SHAPING</li>
+                    <li>MICROBLADING</li>
+                    <li>OMBRE BROWS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h3>GALLERY</h3>
+        <div class="grid">
+            <img src="https://via.placeholder.com/150" alt="Gallery 1">
+            <img src="https://via.placeholder.com/150" alt="Gallery 2">
+            <img src="https://via.placeholder.com/150" alt="Nails 1">
+            <img src="https://via.placeholder.com/150" alt="Gallery 3">
+            <img src="https://via.placeholder.com/150" alt="Gallery 4">
+            <img src="https://via.placeholder.com/150" alt="Nails 2">
+        </div>
+    </section>
+
+    <footer class="contact-section">
+        <div class="contact-info">
+            <p>📍 107 Stegman St. Eastlynne, Pta. 0186</p>
+            <p>💬 +27 82 571 3669</p>
+            <div class="social-icons">
+                <span>f</span> <span>t</span>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <label>Name</label>
+            <input type="text" placeholder="Name">
+            <label>Email</label>
+            <input type="email" placeholder="Email">
+            <label>Message</label>
+            <textarea rows="4"></textarea>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </footer>
+
+</body>
+</html>

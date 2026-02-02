@@ -1,0 +1,60 @@
+1. Assisting with the Cropped Images
+Since I can see the original flyer, I can describe the 8 main crops you need to make from that one file using any basic image editor (like Paint, Photoshop, or even a free online cropper):
+Image Name,Description/Location on Flyer
+hero-bg.jpg,The top banner: Crop the woman with the red lips and gold nails.
+services-eye.jpg,The circular crop: The close-up of the eye with long lashes.
+gallery1.jpg,"Top Row, Left: Close-up of eye/eyebrow (natural)."
+gallery2.jpg,"Top Row, Middle: Close-up of eye/eyebrow (angled)."
+gallery3.jpg,"Top Row, Right: Pink/Purple nails with white snowflakes."
+gallery4.jpg,"Bottom Row, Left: Eye with thick lashes (natural)."
+gallery5.jpg,"Bottom Row, Middle: Eye with thick lashes (angled)."
+gallery6.jpg,"Bottom Row, Right: Purple glittery nails with snowflakes."
+
+2. The Purple Bokeh Effect (CSS)
+Instead of using a flat image for the background, you can use Multiple Radial Gradients in CSS to create those soft, glowing circles (bokeh) from the original design. This keeps your site fast and looks crisp on all screens.
+
+Add this to your CSS for the header or the services section:
+.bokeh-background {
+    background-color: #f3e5f5; /* Light purple base */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 20%),
+        radial-gradient(circle at 80% 10%, rgba(225, 190, 231, 0.6) 0%, transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(240, 98, 146, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.5) 0%, transparent 15%);
+    background-attachment: fixed; /* Keeps the dots in place while scrolling */
+}
+
+3. Cleaning the Gallery LayoutIn your current layout, the gallery images seem to be stacked or repeating. Use CSS Grid to make them look exactly like the $3 \times 2$ grid in the flyer:
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* This prevents the "stretched" look */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+I am building a website based on a flyer. Here is the layout specification for you to code:
+
+Header: Features a hero image of a woman with red lips and gold-foiled nails. The text 'Beauty Salon' is in gold script, and 'by Nelie' is in purple script below it.
+
+Navigation: A horizontal white bar. Links: HOME (Pink background, white text), SERVICES, ABOUT US, CONTACT.
+
+Services Section: Purple gradient background with white 'bokeh' light circles.
+
+Left: A circular image of an eye with long lashes.
+
+Right: A list titled 'OUR SERVICES:' (Pink, underlined). Items: NAILS, LASHES, EYEBROW SHAPING, MICROBLADING, OMBRE BROWS (all in deep purple).
+
+Gallery: A 3x2 grid of images showing close-ups of eyes and purple/pink nail art.
+
+Footer: Left side has contact info (107 Stegman St, +27 82 571 3669) and a small map. Right side has a contact form with fields for Name, Email, and Message.
+
+Please generate the HTML and CSS for this structure using a mobile-first responsive design.
